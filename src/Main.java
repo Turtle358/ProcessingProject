@@ -1,5 +1,4 @@
 import processing.core.*;
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -41,6 +40,8 @@ public class Main extends PApplet {
 
     @Override
     public void draw() {
+        frameRate(mouseX + 2);
+        println(frameRate);
         randomSeed(50);
         background(255);
         fill(0);
@@ -59,9 +60,5 @@ public class Main extends PApplet {
             x=  (x+10) % width;
             y = height;
         }
-    }
-
-    public static int calculateDistanceRectAndOpacity() {
-        return 0;
     }
 }
